@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THANK YOU !</title>
+    <style>
+        body {
+            background-color: #1a1a1a; /* Dark background color for night mode */
+            color: #ffffff; /* White text color for night mode */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>You can close this tab</h1>
+    <script>
+        // Get the fragment from the URL
+        var fragment = window.location.hash.substring(1);
+
+        var keyValuePairs = fragment.split('&');
+
+        // Create an empty object to store the key-value pairs
+        var jsonResult = {};
+
+        // Iterate over the key-value pairs
+        keyValuePairs.forEach(function(keyValuePair) {
+            // Split each key-value pair by '='
+            var parts = keyValuePair.split('=');
+
+            // DecodeURIComponent to handle special characters in values
+            var key = parts[0];
+            var value = decodeURIComponent(parts[1]);
+
+            // Add the key-value pair to the object
+            jsonResult[key] = value;
+        });
+
+        // Create a new XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
+
+        // Configure it: POST-request for the /submit-fragment endpoint
+        xhr.open("POST", "/", true);
+        
+        // Set the content type to JSON
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+        // Convert the data to JSON format
+        var jsonData = JSON.stringify(jsonResult);
+
+        // Send the POST request with the data
+        xhr.send(jsonData);
+    </script>
+</body>
+</html>
+
