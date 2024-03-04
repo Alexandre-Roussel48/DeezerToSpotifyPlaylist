@@ -1,0 +1,2 @@
+run these :
+sudo apt install jq
