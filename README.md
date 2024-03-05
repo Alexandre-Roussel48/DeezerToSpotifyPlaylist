@@ -62,4 +62,4 @@ This project is licensed under the MIT License - see the [LICENSE](https://raw.g
 
 ---
 
-Feel free to contribute to the project and make it even better! If you encounter any issues, please report them in the [Issues]([https://github.com/Alexandre-Roussel48/DeezerToSpotifyPlaylist.git/issues](https://github.com/Alexandre-Roussel48/DeezerToSpotifyPlaylist/issues)https://github.com/Alexandre-Roussel48/DeezerToSpotifyPlaylist/issues) section.
+Feel free to contribute to the project and make it even better! If you encounter any issues, please report them in the [Issues](https://github.com/Alexandre-Roussel48/DeezerToSpotifyPlaylist/issues) section.
